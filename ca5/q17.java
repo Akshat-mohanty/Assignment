@@ -1,18 +1,21 @@
-package ca5;
+package hw5;
 import java.util.*;
-public class q17
+class q17
 {
-    public static void main(String args[])
-    {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter the Number to find the square root :");
-        double c = in.nextDouble();
-        double e = 1e-15;
-        double t = c;
-        while (Math.abs(t - c/t) > e*t)
-        {
-            t = (c/t + t) / 2.0;
-        }
-       System.out.println(t);
-    }
+	public static void main(String args[])
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter the Value of n :");
+		int n=in.nextInt();
+		int ans=0;
+		for(int a=2; a<=n; a++)
+		{
+			if(n%a==0)
+			{
+				ans=a;
+				break;
+			}
+		}
+		System.out.println("Lowest Perfect Divisior of "+n+" = "+ans);
+	}
 }

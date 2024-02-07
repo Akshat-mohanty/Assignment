@@ -1,16 +1,19 @@
-package ca5;
-public class q18
+package hw5;
+import java.util.*;
+class q18
 {
-    public static void main(String args[])
-    {
-        double c = Double.parseDouble(args[0]);
-        double e = 1e-10;
-        double t = c;
-        double k = Double.parseDouble(args[1]);
-        while (Math.abs(t - c/t) > e*t)
-        {
-            t = (c/t + t) / k;
-        }
-       System.out.println(t);
-    }
+	public static void main(String args[])
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter the Value of n :");
+		int n =in.nextInt();
+		System.out.println("Perfect Divisiors of "+n+" are");
+		for(int a=1; a<=n; a++)
+		{
+			if(n%a==0)
+			{
+				System.out.println(a);
+			}
+		}
+	}
 }

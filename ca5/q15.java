@@ -1,23 +1,20 @@
-package ca5;
+package hw5;
 import java.util.*;
 class q15
 {
 	public static void main(String args[])
 	{
 		Scanner in = new Scanner(System.in);
-		System.out.print("Enter the Savings Amount :");
-		double p=in.nextDouble();
-		System.out.print("Enter the Annual Intrest Rate :");
-		double i=in.nextDouble();
-		i=i/100.0;
-		i=i/12.0;
-		System.out.print("Enter the Number of Months :");
+		System.out.print("Enter the Number :");
 		int n=in.nextInt();
-		double f=0;
-		for(int a=1; a<=n; a++)
+		String s=Integer.toString(n);
+		int sm=0;
+		for(int a=0; a<s.length(); a++)
 		{
-			f=p*(1+i)+f;
+			char ch=s.charAt(a);
+			int t=Integer.parseInt(ch+"");
+			sm=sm+t;
 		}
-		System.out.println("You have Earned "+f);
+		System.out.println("sum of digits ="+sm);
 	}
 }

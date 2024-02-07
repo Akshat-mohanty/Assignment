@@ -1,28 +1,20 @@
-package ca5;
+package hw5;
 import java.util.*;
+import java.math.*;
 class q22
 {
 	public static void main(String args[])
 	{
 		Scanner in = new Scanner(System.in);
-		System.out.print("Enter a number :");
-		int n=in.nextInt();
-		int c=0,a=1;
-		while(n>=a)
+		System.out.print("Enter the value of n :");
+		String nt=in.nextLine();
+		System.out.print("Enter the value of x :");
+		int x=in.nextInt();
+		BigInteger n = new BigInteger(nt);
+		for(int a=1; a<x; a++)
 		{
-			if(n%a==0)
-			{
-				c++;
-			}
-			a++;
+			n=n.multiply(BigInteger.valueOf(Integer.parseInt(nt)));
 		}
-		if(c==2)
-		{
-			System.out.println(n+" is a Prime Number ");
-		}
-		else
-		{
-			System.out.println(n+" is a Non Prime Number ");
-		}
+		System.out.println("n^x="+n);
 	}
 }

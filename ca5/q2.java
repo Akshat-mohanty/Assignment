@@ -1,20 +1,17 @@
-package ca5;
+package hw5;
 import java.util.*;
 class q2
 {
 	public static void main(String args[])
 	{
 		Scanner in = new Scanner(System.in);
-		System.out.print("Enter the Number of Students :");
+		System.out.print("Enter the Value of n :");
 		int n=in.nextInt();
-		int c=0;
-		for(int a=0; a<n; a++)
+		int s=0;
+		for(int a=1; a<=n; a++)
 		{
-			System.out.print("Enter Marks : ");
-			int m=in.nextInt();
-			if(m>=40)
-				c++;
+			s=s+a*a;
 		}
-		System.out.print(c+" has passed the Exam");
+		System.out.println("Sum ="+s);
 	}
 }

@@ -1,22 +1,24 @@
-package ca5;
+package hw5;
 import java.util.*;
 class q12
 {
 	public static void main(String args[])
 	{
 		Scanner in = new Scanner(System.in);
-		System.out.print("Enter the Value x : ");
-		double x=in.nextDouble();
-		double ans=0;
-		for(int n=0; n<=20; n++)
+		System.out.print("Enter the value of d :");
+		int d=in.nextInt();
+		System.out.print("Enter the value of e :");
+		int e=in.nextInt();
+		int a=0,b=1;
+		while(a<=d)
 		{
-			double f=1;
-			for(int a=1; a<=n; a++)
-			{
-				f=f*a;
-			}
-			ans=ans+Math.pow(x,n)/f;
+			int t=a+b;
+			a=b;
+			b=t;
 		}
-		System.out.println("e^"+x+"="+ans);
+		if(b==Math.max(d,e) && e==Math.min(d,e))
+			System.out.println(d+","+e+" is a part of fibonacci series ");
+		else
+			System.out.println(d+","+e+" is not a part of fibonacci series");
 	}
 }

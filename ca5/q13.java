@@ -1,20 +1,27 @@
-package ca5;
+package hw5;
 import java.util.*;
 class q13
 {
 	public static void main(String args[])
 	{
 		Scanner in = new Scanner(System.in);
-		System.out.print("Enter the Value of n :");
+		System.out.print("Enter the value of n :");
 		int n=in.nextInt();
-		long t1=0l,t2=1l;
-		System.out.println(t1);
-		for(int a=1; a<=n; a++)
+		for(int a=0; a<=n; a++)
 		{
-			long t=t2;
-			t2=t1+t2;
-			t1=t;
-			System.out.println(t1);
+
+			int f=1,s=0;
+			for(int b=1; b<=a; b++)
+			{
+				f=f*b;
+			}
+			s=s+f;
+			for(int b=1; b<=(a+1); b++)
+			{
+				f=f*b;
+			}
+			s=s+f;
+			System.out.println(s);
 		}
 	}
 }

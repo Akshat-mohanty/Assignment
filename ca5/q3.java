@@ -1,21 +1,15 @@
-package ca5;
+package hw5;
+import java.util.*;
 class q3
 {
 	public static void main(String args[])
 	{
-		int c=0;
-		for(int a=100; a<=1000; a++)
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter the value of n :");
+		int n=in.nextInt();
+		for(int a=0; a<=n; a++)
 		{
-			if(a%5==0 && a%6==0)
-			{
-				System.out.print(a+" ");
-				c++;
-			}
-			if(c==10)
-			{
-				c=0;
-				System.out.println();
-			}
+			System.out.print((int)Math.pow(2,a)+"\t");
 		}
 	}
 }

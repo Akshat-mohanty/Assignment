@@ -1,18 +1,20 @@
-package ca5;
+package hw5;
 import java.util.*;
 class q16
 {
 	public static void main(String args[])
 	{
 		Scanner in = new Scanner(System.in);
-		System.out.print("Enter a Number : ");
+		System.out.print("Enter the number of digits :");
 		int n=in.nextInt();
-		int f=0;
-		while(n>0)
+		String s="";
+		System.out.println("Start Entering the Digits");
+		for(int a=0; a<n; a++)
 		{
-			f=f*10+n%10;
-			n=n/10;
+			int inp=in.nextInt();
+			s=s+inp;
 		}
-		System.out.println("Reversed Number : "+f);
+		n=Integer.parseInt(s);
+		System.out.println("Entered Number ="+n);
 	}
 }

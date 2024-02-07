@@ -1,15 +1,32 @@
-package ca5;
+package hw5;
 import java.util.*;
 class q1
 {
 	public static void main(String args[])
 	{
 		Scanner in = new Scanner(System.in);
-		System.out.println("Enter a Number :");
-		int n=in.nextInt();
-		for(int a=0; a<=n; a++)
+		System.out.print("Enter the Numbers Seprated by Spaces :");
+		String inp=in.nextLine(),t="";
+		int cn=0, cp=0;
+		inp=inp.trim();
+		inp=inp+" ";
+		for(int a=0; a<inp.length(); a++)
 		{
-			System.out.println(a+"\t"+(int)Math.pow(2,a));
+			char ch=inp.charAt(a);
+			if(ch==' ')
+			{
+				int tmp=Integer.parseInt(t);
+				if(tmp<0)
+					cn++;
+				else
+					cp++;
+				t="";
+			}
+			else
+			{
+				t=t+ch;
+			}
 		}
+		System.out.println("There are "+cn+" Negative Numbers and "+cp+" Non-Negative Numbers");
 	}
 }

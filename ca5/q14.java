@@ -1,20 +1,13 @@
-package ca5;
+package hw5;
 import java.util.*;
 class q14
 {
 	public static void main(String args[])
 	{
 		Scanner in = new Scanner(System.in);
-		System.out.print("Enter the Value of n :");
+		System.out.print("Enter the Number :");
 		int n=in.nextInt();
-		long t1=0l,t2=1l;
-		System.out.println(t1);
-		for(int a=1; a<=n; a++)
-		{
-			long t=t2;
-			t2=t1+t2;
-			t1=t;
-			System.out.println(t1);
-		}
+		String s=Integer.toString(n);
+		System.out.println("No of digits ="+s.length());
 	}
 }

@@ -1,6 +1,6 @@
 package hw5;
 import java.util.*;
-class q7
+class q6
 {
 	public static void main(String args[])
 	{
@@ -9,12 +9,23 @@ class q7
 		int n=in.nextInt();
 		int f=1,a=1;
 		boolean k=false;
-		while(f<=n)
+		while(f<n)
 		{
-			a++;
 			f*=a;
+			if(f==n)
+			{
+				k=true;
+				break;
+			}
+			a++;
 		}
-		f/=a;
-		System.out.println("Largest possible factorial ="+f);
+		if(k)
+		{
+			System.out.println(n+" is a factorial number");
+		}
+		else
+		{
+			System.out.println(n+" is a non factorial number");
+		}
 	}
 }
